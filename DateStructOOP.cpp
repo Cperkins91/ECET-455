@@ -13,6 +13,7 @@ using namespace std;
 
 class date {
 public:
+    date(int d, int m, int y) : day(d), month(m),year(y){}
     void setdate(int d ,int m ,int y){
         day = d;
         month = m;
@@ -28,13 +29,13 @@ private:
 
 int main()
 {
-    class date d1;
     int d,m,y;
     char dummy;
     cout << "Please enter the date in format DD/MM/YYYY: " << endl;
     std::cin >> d >> dummy >> m >> dummy >> y;
-    d1.setdate(d , m, y);
+    class date d1(d,m,y);
     d1.getdate();
 }
+
 
 
